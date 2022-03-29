@@ -11,4 +11,4 @@ type loopUnion<Union extends string, Item extends string = Union> =
   Item extends Item ? `loop ${Item}` : never;
 type result = loopUnion<"A" | "B" | "C">; // "loop A" | "loop B" | "loop C"
 // 2. 如何知道T is never
-type IsNever<T> = [T] extends [never] ? true : false;
+// type IsNever<T> = [T] extends [never] ? true : false;
